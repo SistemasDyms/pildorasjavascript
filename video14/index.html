@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 13</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script>	
+</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 14</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+<h1>Control de Flujo Condicional IF bucles condicionales y anidamiento parte 4</h1>
+	<p>
+	<br>
+<br>
+<br>
+<hr>
+<form action="index.html" POST="GET">
+	<p>Nombre: </p><input type="text" id="nom"><br/>
+	<p>Apellido:</p><input type="text" id="ape"><br/>
+	<p>Edad:</p><input type="text" id="edad"><br/>
+	<p>Licencia:</p><input type="text" id="carnet"><br/>
+	<input type="submit">
+</form>
+<p>
+	<script>
+		var cuerpo= document.getElementById("cuerpo");
+		var nom =document.getElementById("nom");
+		var ape =document.getElementById("ape");
+		var edad =document.getElementById("edad");
+		var carnet =document.getElementById("carnet");
+		var num1 = prompt("ingresa el primer valor");
+		var num2 = prompt("ingresa el segundo valor");
+		if(!isNaN(num1) && !isNaN(num2)){
+			var op= prompt("ingrese el tipo de operacion ");	
+			var resultado;
+			num1=parseInt(num1);
+			num2=parseInt(num2);
+			/*var color=prompt("ingresa un color para el cuerpo ").toLowerCase();
+			/*var ahorro=prompt("Cuanto tienes ahorrado");
+			var manejo= prompt("Pero sabes manejar?");*/
+			/*if(color =="azul"){
+				cuerpo.style.backgroundColor="#0000ff";
+			}else if(color=="rojo"){
+				cuerpo.style.backgroundColor="#FF0000";
+			}else if(color=="verde"){
+				cuerpo.style.backgroundColor="#00FF00";
+			}else{
+				alert("No ingreso ningun color");
+			}*/
+			// calculadora suma resta  y demas
+			if (op=="suma") {
+				resultado=num1+num2;
+				document.write("el resultado de la "+op+" es: "+resultado);
+			}else if(op=="resta") {
+				resultado=num1-num2;
+				document.write("el resultado de la "+op+" es: "+resultado);
+			}else if(op=="multiplicacion") {
+				resultado=num1*num2;
+				document.write("el resultado de la "+op+" es: "+resultado);
+			}else if(op=="division") {
+				resultado=num1/num2;
+				document.write("el resultado de la "+op+" es: "+resultado);
+			}else{
+				document.write("No indico nada asi que vaya a que le den!!");
+			}
+	}else{
+		document.write("Esta ingresando Caracteres No validos");
+	}
+	</script>
+</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>

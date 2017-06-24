@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 38</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<script>	
+	$(document).ready(function() {
+
+		var boton = document.querySelectorAll("input");
+		for(var i=0;boton.length;i++){
+			boton[i].addEventListener("click",aumentar,false);
+			boton[i].addEventListener("click",disminuir,false);
+		}
+
+		/*document.getElementById("aumentar1").addEventListener("click",aumentar,false);
+		document.getElementById("aumentar2").addEventListener("click",aumentar,false);
+		document.getElementById("aumentar3").addEventListener("click",aumentar,false);
+		document.getElementById("disminuir1").addEventListener("click",disminuir,false);
+		document.getElementById("disminuir2").addEventListener("click",disminuir,false);
+		document.getElementById("disminuir3").addEventListener("click",disminuir,false);*/
+		function aumentar(e){
+			var zona;
+			if(e.target==aumentar1){
+				zona="#noticia1";
+			}else if(e.target==aumentar2){
+				zona="#noticia2";
+			}else if(e.target==aumentar3){
+				zona="#noticia3";
+			}
+			var tam=$(zona).css("font-size");
+			tam=parseInt(tam);
+			$(zona).css("font-size",tam*1.5);
+		}
+		function disminuir(e){
+			var zona;
+			if(e.target==disminuir1){
+				zona="#noticia1";
+			}else if(e.target==disminuir2){
+				zona="#noticia2";
+			}else if(e.target==disminuir3){
+				zona="#noticia3";
+			}
+			var tam =$(zona).css("font-size");
+			tam=parseInt(tam);
+			$(zona).css("font-size",tam/1.5);
+		}
+	});
+	</script>
+	
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 37</p>
+	<p>aumentar/disminuir texto dinamicamente parte </p>
+
+	<p class="logo">Leyendo y cambiando atributos</p>
+</div>
+<div class="contenido">
+<div class="principal">
+		<div class="cuadro"  id="noticia1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium facilis deserunt fuga. Dolor voluptatum architecto, quam quis tempore illo maiores nemo non sequi blanditiis explicabo soluta corrupti esse error praesentium!</p>
+		<input type="button" value="mas" class="btn" id="aumentar1" ><input type="button" value="menos" tn" id="disminuir1" ></div>
+		<div class="cuadro" id="noticia2"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cum dolorum eum commodi perferendis voluptate vero porro non consectetur! Quae unde doloribus magni iste officia nulla, in quos impedit perspiciatis.</p> <input type="button" value="mas" class="btn" id="aumentar2" ><input type="button" value="menos" tn" id="disminuir2" ></div>
+		<div class="cuadro" id="noticia3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sit quas tempora, quis, possimus sed a provident aspernatur sint fuga eligendi minus soluta, culpa, minima voluptas ab. Eaque, rerum illo!</p>  <input type="button" value="mas" class="btn" id="aumentar3" ><input type="button" value="menos" tn" id="disminuir3" ></div>
+	
+		
+</div>	
+</div>
+
+	
+
+</div>	
+</body>
+</html>

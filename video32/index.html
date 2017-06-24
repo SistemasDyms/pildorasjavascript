@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 32</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<script>	
+	$(document).ready(function(){
+		//alert($("#principal h2").html());
+		//$("#principal").html("<p>Errores en el culo</p>"); sustituye texto 
+		//$("#principal").append("<p>Errores en el culo</p>"); agrega despues del texto
+		//$("#user").after("<p>Errores en el culo</p>");agrega despues
+		//$("#principal").before("<p>Errores en el culo</p>"); agrega despues 
+		//$("#principal").text("Errores en el culo"); agrega el texto que esta entre las etiquetas 
+	});
+	function prueba(){
+			var u = document.getElementById("user").value;
+			if(u==""){
+				$("#user").after("rellena este campo");
+			}else{
+				$("#user").after("");
+			}
+		}
+	
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
+	<p>agregar texto dinamicamente parte 1</p>
+	<p class="logo"></p>
+</div>
+<div class="contenido">
+	<div id="principal" class="micontenido">
+	<form action="" method="GET">
+		<p>User:</p><input type="text" id="user"><br>
+		<p>pass:</p><input type="pass" id="pass"><br>
+		<input type="button" value="Envialomenor" onClick="prueba()">
+	</form>
+
+	</div>
+</div>
+</div>
+
+</body>
+</html>

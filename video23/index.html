@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 23</title>
+<link rel="stylesheet" href="css/micss2.css">
+	<script>	
+	function calculadora_suma(num1,num2){
+		document.write("suma "+(num1+num2));
+	}
+	function calculadora_resta(num1,num2){
+		resultado=num1-num2;
+		document.write("resta "+resultado);
+	}
+	function calculadora_multiplica(num1,num2){
+		resultado=num1*num2;
+		document.write("multiplicacion "+resultado);
+	}
+	function calculadora_divide(num1,num2){
+		resultado=num1/num2;
+		document.write("division "+resultado);
+	}
+	var num1 = prompt("ingresa el Primer Numero");
+	var num2 = prompt("ingresa el segundo Numero");
+	num1=parseInt(num1);
+	num2=parseInt(num2);
+	
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 23</p>
+	<p class="logo"> Funciones parte 3 Ejemplo de calculadora</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+	<p>
+	el resultado de la : 
+		<script>
+		calculadora_suma(num1,num2);
+		</script>
+	</p>
+
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* reset */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html , body{
+	line-height: 1;
+	background-color: #334873;
+	background-image: url(../_images/bg-page2.png);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	contenido: '';
+	contenido: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.cuadro{
+	width: 200px;
+	margin: 50px;
+	float: left;
+	border: 1px solid red;
+	padding: 15px;
+}
+.cuadro p{
+	font-size: 18px;
+	font-family: arial;
+	color: #fff;
+}
+.titulo{
+	font-size: 38px;
+	text-align: center;
+	color: #fff;
+}
+.table{
+
+	width: 100%;
+	margin-left: 20px; 
+	margin-top: 20px ;
+}

@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio Documento video 13</title>
+<script src="funciones.js"></script>
+<style>
+
+table{
+	margin:auto;
+}
+
+
+</style>
+
+
+</head>
+
+<body id="cuerpo">
+<form name="form1" method="post" action="" id="miformulario">
+  <table width="25%" border="1" id="mitabla">
+    <tr>
+      <td>Nombre:</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Apellidos:</td>
+      <td><input type="text" name="textfield2" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="text" name="textfield3" id="textfield3"></td>
+    </tr>
+    <tr>
+      <td>Carnet:</td>
+      <td><input type="text" name="textfield4" id="textfield4"></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="button" id="button" value="Enviar"></td>
+      <td><input type="reset" name="button2" id="button2" value="Restablecer"></td>
+    </tr>
+  </table>
+</form>
+<script>
+    var cuerpo = document.getElementById("cuerpo");
+    var color = prompt('introduce el color de fondo de la pagina rojo, azul o verde').toLowerCase();// Pasa el String a minuscula OJo # para mayusculas se usa toUpperCase();
+    /*if(color=='azul'){
+      cuerpo.style.backgroundColor='blue';
+      }else if(color=='rojo'){
+          cuerpo.style.backgroundColor='red';
+        }else if(color=='verde'){
+            cuerpo.style.backgroundColor='green';
+        }
+    else{
+      alert('Ingrese un color valido');
+    }    */
+    if(color!='azul' && color!='rojo' && color!='verde'){
+
+        alert('Color No valido!!');
+    }else if(color=='azul'){
+        cuerpo.style.backgroundColor='blue';
+      }else if(color=='rojo'){
+          cuerpo.style.backgroundColor='red';
+        }else{
+            cuerpo.style.backgroundColor='green';
+              }
+
+</script>
+
+
+
+</body>
+</html>

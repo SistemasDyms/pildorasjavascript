@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 39-</title>
+
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+	<script>	
+		$(document).ready(function(){
+			document.getElementById("imagen").addEventListener("mouseover",grande,false);
+			document.getElementById("imagen").addEventListener("mouseout",igual,false);
+			var elementos= document.querySelectorAll("img");
+									
+				for(var i = 0;i<elementos.length;i++){
+				elementos[i].addEventListener("mouseover",up,false);
+				elementos[i].addEventListener("mouseout",down,false);
+			}
+
+		});
+		function grande(){
+		$("#imagen").attr("src","../public/img/s-galeria1.jpg");
+		}
+		function igual(){
+		$("#imagen").attr("src","../public/img/r-historica.jpg");
+	
+		}	
+		function up(e){
+			if(e.target==img1){
+			$("#img1").attr("src","../public/img/g-banner.jpg");
+			}else if(e.target==img2){
+			$("#img2").attr("src","../public/img/g-banner2.png");
+			}else if(e.target==img3){
+			$("#img3").attr("src","../public/img/g-banner3.png");
+			}
+		}
+		function down(e){
+			if(e.target==img1){
+			$("#img1").attr("src","../public/img/r-historica.jpg");
+			}else if(e.target==img2){
+			$("#img2").attr("src","../public/img/s-galeria1.jpg");
+			}else if(e.target==img3){
+			$("#img3").attr("src","../public/img/s-galeria2.jpg");
+			}
+		}
+
+			
+	
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
+	<p>Leyendo y cambiando atributos HTML con JavaScript</p>
+
+	<p class="logo">reemplazar cosas</p>
+</div>
+<div class="contenido">
+	<div id="principal">
+	<img src="..//public/img/r-historica.jpg" id="imagen" width="150px" height="150px">
+		
+	<div id="imagenes">
+		<img src="../public/img/r-historica.jpg" id="img1"  alt="">
+		<img src="../public/img/s-galeria1.jpg"  id="img2" alt="">
+		<img src="../public/img/s-galeria2.jpg" id="img3"  alt="">
+	</div>
+	</div>	
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 20</title>
+<link rel="stylesheet" href="css/micss2.css">
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 20</p>
+	<p class="logo">Bucle For parte 2</p>
+</div>
+<p>Rellenar un array mediante un bucle For</p>
+<div class="contenido">
+	<div class="principal">
+	<script>	
+	var equipos = new Array();
+	var nombres="";
+	var contador=0;
+	while(nombres!="salir"){
+		nombres=prompt("Ingresa el nombre de Tus equipos favoritos");
+		equipos[contador]=nombres;
+		contador++;
+	}
+	equipos.pop();
+	for(i=0; i<equipos.length; i++){
+
+		document.write("<p>"+equipos[i]+"</p><br>");
+	}
+
+	
+	</script>
+
+	</div>
+</div>
+</div>
+</body>
+</html>

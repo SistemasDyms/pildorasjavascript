@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 33</title>
+<link rel="stylesheet" href="css/micss2.css" >
+<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<script>	
+		$(document).ready(function(){
+			/*var x = document.getElementById("cerrar");
+			x.addEventListener("click",cerrar,false);*/
+			document.getElementById("cerrar").addEventListener("click",cerrar,false);//para cerrar el banner
+			
+			var x = document.querySelectorAll("#carrete img");
+			for(var i = 0; i< 4;i++){
+				x[i].addEventListener("click",mostrar,false);//para tomar el id de la imagen ademas de ponerla a la escucha del click
+			}
+		});
+		function cerrar(){
+			$("#principal").remove();
+		}
+		function mostrar(e){
+			if(e.target==img1){
+				$("#img1").replaceWith("<div id='img1'>Compra Agregada al carrito</div>");
+			}
+			if(e.target==img2){
+				$("#img2").replaceWith("<div id='img2'>Compra Agregada al carrito</div>");
+			}
+			if(e.target==img3){
+				$("#img3").replaceWith("<div id='img3'>Compra Agregada al carrito</div>");
+			}
+			if(e.target==img4){
+				$("#img4").replaceWith("<div id='img4'>Compra Agregada al carrito</div>");
+			}
+		}
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
+	<p>agregar texto dinamicamente parte 2</p>
+
+	<p class="logo">reemplazar cosas</p>
+</div>
+<div class="contenido">
+	<div id="principal">
+		<p>banner metido saliendo</p>
+		<p id="cerrar">Cerrar</p>
+	</div>	
+	<div id="carrete"> 
+	
+	<img src="1 (1).jpg" id="img1" alt="" >
+	<img src="1 (2).jpg" id="img2" alt="" >
+	<img src="1 (4).jpg" id="img3" alt="" >
+	<img src="1 (5).jpg" id="img4" alt="" >
+	</div>
+	
+</div>
+</div>
+
+</body>
+</html>

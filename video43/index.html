@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 43-</title>
+
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+	<script>	
+		$(document).ready(function(){
+		$("#mensaje").hide();
+		$("#img1").hover(mostrar,quitar);
+		});
+		function mostrar(){
+		$("#mensaje").show();
+
+		}
+		function quitar(){
+		$("#mensaje").hide();
+		}
+			
+	
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Eventos en Jquery parte 2</p>
+
+
+</div>
+<div class="contenido">
+	<div id="principal">
+	
+		
+	<div id="imagenes">
+		<img src="../public/img/img1.jpg" id="img1" width="250px" height="250px">
+		<img src="../public/img/img1.jpg" id="img2" width="250px" height="250px">
+		<img src="../public/img/img1.jpg" id="img3" width="250px" height="250px">
+		<img src="../public/img/img1.jpg" id="img4" width="250px" height="250px">
+	</div>
+	<div id="mensaje">
+		<h3>Mensaje de prueba</h3>
+	</div>
+	</div>	
+</div>
+</div>
+
+</body>
+</html>

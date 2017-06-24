@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pildoras informaticas video 38</title>
+	<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<link rel="stylesheet" href="css/micss3.css">
+<script>
+	$(document).ready(function (){
+	var boton = document.querySelectorAll("input");
+	for(var i=0;boton.length;i++){
+		boton[i].addEventListener("click",aumentar,false);
+	}
+	});
+	function aumentar(e){
+	var zona;
+		if(e.target==blect1){
+			zona="#lectura1";	
+		}else if(e.target==blect2){
+			zona="#lectura2";
+		}else if(e.target==blect3){
+			zona="#lectura3";
+		}
+	$(zona).css({"background-color":"black",
+
+	"font-size":"30px",
+	"text-align":"justify"});
+	}
+	
+
+
+
+</script>
+</head>
+<body>
+	<div class="cuerpo">
+	<h1 class="titulo">Noticias</h1>
+		<div class="cuadro" id="lectura1" >
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quasi, odit incidunt expedita provident nobis reiciendis eos nesciunt id necessitatibus laborum, porro quibusdam accusamus reprehenderit cum, ex suscipit et mole
+			stias.</p>
+			<table class="table">
+				<tr>
+					<td><input type="submit" value="leer noticia" id="blect1"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="cuadro" id="lectura2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quasi, odit incidunt expedita provident nobis reiciendis eos nesciunt id necessitatibus laborum, porro quibusdam accusamus reprehenderit cum, ex suscipit et mole
+			stias.</p>
+			<table class="table">
+				<tr>
+					<td><input type="submit" value="leer noticia" id="blect2"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="cuadro" id="lectura3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quasi, odit incidunt expedita provident nobis reiciendis eos nesciunt id necessitatibus laborum, porro quibusdam accusamus reprehenderit cum, ex suscipit et mole
+			stias.</p>
+			<table class="table">
+				<tr>
+					<td><input type="submit" value="leer noticia" id="blect3"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

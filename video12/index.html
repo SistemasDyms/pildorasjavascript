@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 12</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script>	
+</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 12</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+<h1>Control de Flujo Condicional IF parte 2</h1>
+	<p>
+	<br>
+<br>
+<br>
+<hr>
+<form action="index.html" POST="GET">
+	<p>Nombre: </p><input type="text" id="nom"><br/>
+	<p>Apellido:</p><input type="text" id="ape"><br/>
+	<p>Edad:</p><input type="text" id="edad"><br/>
+	<p>Licencia:</p><input type="text" id="carnet"><br/>
+	<input type="submit">
+</form>
+	<script>
+		var cuerpo= document.getElementById("cuerpo");
+		var nom =document.getElementById("nom");
+		var ape =document.getElementById("ape");
+		var edad =document.getElementById("edad");
+		var carnet =document.getElementById("carnet");
+		var color=prompt("ingresa un color para el cuerpo ");
+		/*var ahorro=prompt("Cuanto tienes ahorrado");
+		var manejo= prompt("Pero sabes manejar?");*/
+		if(color =="azul"){
+			cuerpo.style.backgroundColor="#0000ff";
+		}else if(color=="rojo"){
+			cuerpo.style.backgroundColor="#FF0000";
+		}else if(color=="verde"){
+			cuerpo.style.backgroundColor="#00FF00";
+		}else{
+			alert("No ingreso ningun color");
+		}
+	</script>
+</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>

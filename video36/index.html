@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 36 parte 2</title>
+<link rel="stylesheet" href="css/micss2.css" >
+<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<script>	
+
+	$(document).ready(function() {
+		//$("a[href^='https://']").addClass("color");
+		document.getElementById("cursos").addEventListener("click",resaltarcursos,false);
+		document.getElementById("info").addEventListener("click",resaltarinfo,false);
+
+		function resaltarinfo(){
+			/*$(".cursos").removeClass("color");
+			$(".info").addClass("color");*/
+			$(".info").toggleClass("color");
+		}
+		function resaltarcursos(){
+			/*$(".info").removeClass("color");
+			$(".cursos").addClass("color");*/
+			$(".cursos").toggleClass("color");
+		}
+	});
+	</script>
+</head>
+<body id="cuerpo">
+<h1>Cambiando Atributos parte 2</h1>
+<div class="contenedor">
+	<div id="menu">
+		<div><h2>Cursos mas importantes</h2><input type="checkbox" value="cursos" id="cursos"></div>
+		<div><h2>Informacion Destacada</h2><input type="checkbox" value="informacion" id="info"></div>
+
+	</div>
+<div class="contenido">
+	<div id="principal">
+	<ul>
+			<li><a class="cursos" href="https://www.google.com" target="_blank">Cursos</a></li>
+			<li><a class="cursos" href="https://www.google.com" target="_blank">Cursos</a></li>
+			<li><a class="info" href="http://www.google.com" target="_blank">informacion</a></li>
+			<li><a class="cursos" href="https://www.google.com" target="_blank">Cursos</a></li>
+			<li><a class="info" href="http://www.google.com" target="_blank">informacion</a></li>
+		</ul>	
+	</div>		
+</div>
+</div>
+
+</body>
+</html>

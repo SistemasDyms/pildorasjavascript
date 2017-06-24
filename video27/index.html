@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora parte3</title>
+	<link rel="stylesheet" href="css/micss2.css">
+	<script>
+	var cifra="";
+	var acumulado=0;
+	var sumar= false;
+	var restar = false;
+		function MarcaNumero(n){
+			num=document.getElementById("pantalla").value=cifra+n;	
+			cifra=document.getElementById("pantalla").value;		
+		}
+		function suma(){
+			acumulado=acumulado+parseInt(cifra);
+			document.getElementById("pantalla").value=acumulado;
+			cifra="";
+			sumar=true;
+			restar= false;
+		}
+		function resta(){
+			if(sumar){
+				acumulado=acumulado+parseInt(cifra);
+				document.getElementById("pantalla").value=acumulado;
+			}else{
+				acumulado=acumulado-parseInt(cifra);
+				document.getElementById("pantalla").value=acumulado;		
+			}
+				
+				cifra="";
+				sumar = false;
+				restar= true;
+			
+		}
+		function resultado(){
+			if(sumar){
+				document.getElementById("pantalla").value=acumulado+parseInt(cifra);	
+			}	
+			if(restar){
+				document.getElementById("pantalla").value=acumulado-parseInt(cifra);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="calculadora">
+		<table class="tablecalculadora">
+		  <tr class="pantalla">
+		    <td colspan="4"><input type="text" id="pantalla"></td>
+		  </tr>
+		  <tr class="btnnumber">
+		    <td><input type="button" id="nummas"  value="+" onclick="suma()"></td>
+		    <td><input type="button" id="numresta"  value="-" onclick="resta()"></td>
+		    <td><input type="button" id="numult"  value="*" onclick="MarcaNumero(*)"></td>
+		    <td><input type="button" id="numdiv"  value="/" onclick="MarcaNumero(/)"></td>
+		  </tr>
+		  <tr  class="btnnumber">
+		    <td><input type="button" id="num7" value="7" onclick="MarcaNumero(7)"></td>
+		    <td><input type="button" id="num8" value="8" onclick="MarcaNumero(8)"></td>
+		    <td><input type="button" id="num*" value="9" onclick="MarcaNumero(9)"></td>
+		  </tr>
+		  <tr  class="btnnumber">
+		    <td><input type="button" id="num4" value="4" onclick="MarcaNumero(4)"></td>
+		    <td><input type="button" id="num5" value="5" onclick="MarcaNumero(5)"></td>
+		    <td><input type="button" id="num6" value="6" onclick="MarcaNumero(6)"></td>
+		  </tr>
+		  <tr class="btnnumber" >
+		    <td><input type="button" id="num1" value="1" onclick="MarcaNumero(1)"></td>
+		    <td><input type="button" id="num2" value="2" onclick="MarcaNumero(2)"></td>
+		    <td><input type="button" id="num3" value="3" onclick="MarcaNumero(3)"></td>
+		    <td></td>
+		  </tr>
+		  <tr  class="btnnumber">
+		    <td><input type="button" id="num0" value="0" onclick="MarcaNumero(0)"></td>
+		    <td><input type="button" id="nump" value="." onclick="MarcaNumero(.)"></td>
+		    <td><input type="button" id="numig" value="=" onclick="resultado()"></td>
+		    <td></td>
+		  </tr>  
+	</table>
+</div>
+<script>
+	document.getElementById("pantalla").value=0;
+</script>
+</body>
+</html>

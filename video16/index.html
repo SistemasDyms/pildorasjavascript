@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 16</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script>	
+var nom,edad,ciudad;
+nom=prompt("introduce Tu Nombre");
+while(!isNaN(nom)){
+	nom=prompt("Introduce un Nombre Valido "+nom+" No es un Nombre real!!");
+}
+
+edad=prompt("introduce Tu Edad");
+while(edad <=0 || edad > 150 || isNaN(edad)){
+	edad=prompt("Edad no valida!! "+edad+" No es una edad correcta");
+}
+
+ciudad=prompt("introduce Tu Ciudad");
+while(!isNaN(ciudad)){
+	ciudad=prompt("ingresa una edad real "+ciudad+" No es una ciudad");
+}
+</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 16</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+<h1>Bucle While video 16 parte 2</h1>
+<p>Tambien esta el Bucle Do While</p>
+	<p>con la propiedad length sabremos la cantidad de datos que contiene una Array</p>
+<br>
+<br>
+<br>
+<hr>
+	<p>Nombre: <strong><script>document.write(nom);</script></strong></p><br>
+	<p>Edad: <strong><script>document.write(edad);</script></strong></p><br>
+	<p>Ciudad: <strong><script>document.write(ciudad);</script></strong></p><br>
+<p>
+	<script>
+	var equipos = new Array("real madrid","juventus","barcelona","bayer Muñich");
+	var conteo = 0;
+		while(conteo < equipos.length){
+			document.write(equipos[conteo]);
+			document.write("<br>");
+			conteo++;
+		}
+	</script>
+</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>

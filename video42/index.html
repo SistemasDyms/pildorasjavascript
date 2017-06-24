@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 42-</title>
+
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+	<script>	
+	$(document).ready(function(){
+
+	$("html").dblclick(function(){
+		alert("hola que mas");
+	});
+	$("a").mouseover(function(){
+		var mensaje="<p>Pasaste por el link</p>";
+		$(".logo").append(mensaje);
+	});
+	$("#boton").click(function(){
+		$(this).val("QUE HAS HECHO!!");
+	});
+});		
+
+			
+	
+	</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="">Curso JavaScript Píldoras Informáticas Video 42</p>
+	<p>Eventos</p>
+
+	<p class="">reemplazar cosas</p>
+</div>
+<div class="contenido">
+	<div id="principal">
+	<p><a href="#!">probar</a></p>
+	<form>
+		<input type="text" name="escribe" id="texto"><br>
+		<input type="submit" id="boton" name="enviar">
+	</form>
+	</div>	
+	<div class="logo">
+		
+	</div>
+</div>
+</div>
+
+</body>
+</html>

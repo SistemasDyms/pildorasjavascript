@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 37</title>
+<link rel="stylesheet" href="css/micss2.css">
+<script src="Jquery/jquery-3.2.0.min.js"></script>
+	<script>	
+		$(document).ready(function() {
+			document.getElementById("aumentar1").addEventListener("click",aumentar,false);
+			document.getElementById("disminuir1").addEventListener("click",disminuir,false);
+			function aumentar(){
+				var tam=$("#noticia1").css("font-size");
+				tam=parseInt(tam);
+				$("#noticia1").css("font-size",tam*1.5);
+			}
+			function disminuir(){
+				var tam =$("#noticia1").css("font-size");
+				tam=parseInt(tam);
+				$("#noticia1").css("font-size",tam/1.5);
+			}
+		});
+	</script>
+	
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 37</p>
+	<p>agregar texto dinamicamente parte 3</p>
+
+	<p class="logo">Leyendo y cambiando atributos</p>
+</div>
+<div class="contenido">
+<div id="principal">
+		<div class="cuadro"  id="noticia1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium facilis deserunt fuga. Dolor voluptatum architecto, quam quis tempore illo maiores nemo non sequi blanditiis explicabo soluta corrupti esse error praesentium!
+		<input type="button" value="mas" class="btn" id="aumentar1" ><input type="button" value="menos" tn" id="disminuir1" ></div>
+		<div class="cuadro" id="noticia2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo cum dolorum eum commodi perferendis voluptate vero porro non consectetur! Quae unde doloribus magni iste officia nulla, in quos impedit perspiciatis.<input type="button" value="mas" class="btn" id="aumentar2" ><input type="button" value="menos" tn" id="disminuir2" ></div>
+		<div class="cuadro" id="noticia3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sit quas tempora, quis, possimus sed a provident aspernatur sint fuga eligendi minus soluta, culpa, minima voluptas ab. Eaque, rerum illo! <input type="button" value="mas" class="btn" id="aumentar2" ><input type="button" value="menos" tn" id="disminuir2" ></div>
+</div>		
+</div>
+
+</body>
+</html>

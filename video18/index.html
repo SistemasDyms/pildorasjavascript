@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 18</title>
+<link rel="stylesheet" href="css/micss2.css">
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 18</p>
+</div>
+<div class="contenido">
+	<div class="principal">
+	<table>
+		<tr>
+			<td >
+				<label for="textmensaje"><p>mensaje</p></label>
+				<input type="text" id="mensaje" name="textmensaje">
+			</td>
+			<br><br>
+			<td >
+				<label for="textcontador"><p>intentos</p></label>
+				<input type="text" name="textcontador" id="contador">
+			</td>
+		</tr>
+	</table>
+	<script>	
+		var num=0;
+		var intentos =0;
+		var mensaje= document.getElementById("mensaje");
+		var contador= document.getElementById("contador");
+		var aleatorio= Math.round(Math.random()*100);
+		mensaje.style.width="250px";
+		do{
+			num=prompt("ingrese un numero entre 0 y 100 para ganar la loteria");
+			if(aleatorio>num){
+				mensaje.value="mas alto";
+				mensaje.style.fontSize="18px";
+
+			}
+			if (aleatorio<num){
+				mensaje.value="mas bajo";
+				mensaje.style.fontSize="18px";
+			}
+				intentos++;
+				contador.value=intentos;
+				contador.style.color="red";
+				contador.style.textAlign="center";
+				contador.style.fontSize="18px";
+			
+		}while(aleatorio!=num);
+		
+		mensaje.value="el numero Ganador es "+num;
+		mensaje.style.color="green";
+		//document.write("<p>"+"correcto el numero Ganador es "+num+" utilizo "+intentos+" intentos"+"</p>");
+</script>
+
+</div>
+</div>
+</div>
+</body>
+</html>

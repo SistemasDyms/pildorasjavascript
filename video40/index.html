@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Curso de JavaScipt Video 40</title>
+
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<link rel="stylesheet" type="text/css" href="../public/css/micss2.css">
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script>	
+	$(document).ready(function(){
+		var elementos = document.querySelectorAll("li");
+		for (var i = 0 ;i<elementos.length;i++ ){
+			elementos[i].addEventListener("mouseover",mostrar,false);
+			elementos[i].addEventListener("mouseout",quitar,false);
+		}
+	});
+	function mostrar(e){
+		if(e.target == img1 ){
+			$("#img1").addClass("destacado");
+			$("img").attr("src","../public/img/s-galeria2.jpg");
+		}else if(e.target == img2 ){
+			$("#img2").addClass("destacado");
+			$("img").attr("src","../public/img/s-galeria1.jpg");
+		}else if(e.target == img3 ){
+
+			$("#img3").addClass("destacado");
+			$("img").attr("src","../public/img/r-historica.jpg");
+		}else if(e.target == img4 ){
+
+			$("#img4").addClass("destacado");
+			$("img").attr("src","../public/img/g-banner.jpg");
+		}
+	}
+	function quitar(e){
+	if(e.target == img1 ){
+		$("#img1").removeClass("destacado");
+		$("img").removeAttr("src","");
+	}else if(e.target == img2 ){
+		$("#img2").removeClass("destacado");
+		$("img").removeAttr("src","");
+	}else if(e.target == img3 ){
+		$("#img3").removeClass("destacado");
+		$("img").removeAttr("src","");
+	}else if(e.target == img4 ){
+		$("#img4").removeClass("destacado");
+		$("img").removeAttr("src","");
+	}
+	}
+
+
+
+		
+
+</script>
+</head>
+<body id="cuerpo">
+<div class="contenedor">
+<div class="header">
+	<p class="logo">Curso JavaScript Píldoras Informáticas Video 40</p>
+	<p>Leyendo y cambiando atributos HTML con JavaScript parte 2</p>
+</div>
+<div class="contenido">
+	<div id="listaimg">
+		<ul>
+			<li id="img1">Imagen 1</li>
+			<li id="img2">Imagen 2</li>
+			<li id="img3">Imagen 3</li>
+			<li id="img4">Imagen 4</li>
+		</ul>
+		<div class="vistaimg">
+			<img src="" width="600px" height="400px">
+		</div>
+		
+	
+	</div>	
+</div>
+</div>
+
+</body>
+</html>
