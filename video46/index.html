@@ -2,71 +2,89 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Curso de JavaScipt Video 39-</title>
+<title>Curso de JavaScipt Video 46</title>
 
-<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<style type="text/css">
+	p{
+		font-size: 24px;
+	}
+	.imagen{
+		float: left;
+	}
+	.marco{
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 700px;
+		height: 400px;
+		z-index: 1;
+		border: 2px dotted blue; 
+	}
+</style>
 <script src="../public/js/jquery-3.2.0.min.js"></script>
 	<script>	
-		$(document).ready(function(){
-			document.getElementById("imagen").addEventListener("mouseover",grande,false);
-			document.getElementById("imagen").addEventListener("mouseout",igual,false);
-			var elementos= document.querySelectorAll("img");
-									
-				for(var i = 0;i<elementos.length;i++){
-				elementos[i].addEventListener("mouseover",up,false);
-				elementos[i].addEventListener("mouseout",down,false);
-			}
-
-		});
-		function grande(){
-		$("#imagen").attr("src","../public/img/s-galeria1.jpg");
-		}
-		function igual(){
-		$("#imagen").attr("src","../public/img/r-historica.jpg");
+	$(document).ready(function(){
+		var ruta= $(".imagen").attr("src");
+		$(".marco").hide();
+		$(".imagen").bind("click",ruta,imgGrande);
 	
-		}	
-		function up(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/g-banner.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/g-banner2.png");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/g-banner3.png");
-			}
-		}
-		function down(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/r-historica.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/s-galeria1.jpg");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/s-galeria2.jpg");
-			}
-		}
-
+	});
+	function imgGrande(e){
+		e.stopPropagation();
+		$(".marco").fadeIn(1000);
+		$(".img-sustitucion").replaceWith("<img src='"+ e.data +"' width='700' height='400'>");
+	}
+	$(document).bind("click keypress",function(){
+		$(".marco").fadeOut(1000);
+	});
 			
 	
 	</script>
+
 </head>
 <body id="cuerpo">
 <div class="contenedor">
-<div class="header">
-	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
-	<p>Leyendo y cambiando atributos HTML con JavaScript</p>
 
-	<p class="logo">reemplazar cosas</p>
-</div>
 <div class="contenido">
-	<div id="principal">
-	<img src="..//public/img/r-historica.jpg" id="imagen" width="150px" height="150px">
-		
-	<div id="imagenes">
-		<img src="../public/img/r-historica.jpg" id="img1"  alt="">
-		<img src="../public/img/s-galeria1.jpg"  id="img2" alt="">
-		<img src="../public/img/s-galeria2.jpg" id="img3"  alt="">
-	</div>
-	</div>	
-</div>
+<p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<div class="marco"><img src="" class="img-sustitucion"></div>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	
+	<img src="../public/img/g-banner3.png" class="imagen" width="100px" height="100px">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</p>
 </div>
 
 </body>
