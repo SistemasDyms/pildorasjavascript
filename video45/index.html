@@ -5,31 +5,28 @@
 <title>Curso de JavaScipt Video 45</title>
 <script src="../public/js/jquery-3.2.0.min.js"></script>
 <link rel="stylesheet" href="../public/style.css"><!-- iconos -->
-
-	<script>
-		$(document).ready(function(){
-			$(".resp").hide();
-			
-				$(".preg").click( function (){
-					$(this).next(".resp").fadeIn("slow");
-
-
-				});
-				$(".preg").click( function (){
-					$(this).next(".resp").hide();
-					$(this).addClass("icon-point-up");
-					$(this).removeClass("icon-point-down");
-				});	
+<script>
+	$(document).ready(function(){
+	$(".texto").hide();	
+		$(".boton").click(function(){
+		$(".texto").fadeIn("slow");
 		});
-	</script>
+
+		$(".boton").click(function(){
+		$(".texto").fadeOut("slow");
+		});
+	
+	});
+
+</script>
 
 	<link rel="stylesheet" href="style.css">
 </head>
 <body id="cuerpo">
 <div class="contenedor">
-	<p class="otro">Preguntas</p>
+	<!-- <p class="otro">Preguntas</p>
 	<ul>
-		<li class="preg"><a href="#!">pregunta 1 <i class="icon-point-down"></i></a></li>
+		<li ><a class="preg" href="#!">pregunta 1 </a></i></li>
 			<div class="resp">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi ducimus labore, provident porro debitis corrupti obcaecati dolorem qui consectetur, laudantium itaque voluptatem ullam placeat, aliquam reprehenderit a eveniet deserunt.</p>
 			</div>
@@ -65,8 +62,14 @@
 			<div class="resp">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil sit, ea, ipsa corporis maiores similique quas, labore facilis quos ab consequatur perspiciatis doloremque. Optio nostrum quo maiores ipsam aliquam tenetur!</p>
 			</div>
-	</ul>
+	</ul> -->
 </div>
-
+<a href="#!" class="boton">Click 1 </a><a href="#!" class="boton2">Click 2</a>
+<p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </body>
 </html>
