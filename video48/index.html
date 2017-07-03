@@ -2,71 +2,84 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Curso de JavaScipt Video 39-</title>
+<title>Curso de JavaScipt Video 48</title>
+<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+<style type="text/css">
+	#redes{
+		position: absolute;
+		margin-left:-160px;
+		background-color: #0074D9;
+		width: 170px;
+		height: 150px;
+		padding:20px 5px;
+		float: left; 
+		z-index: 1;
+	}
+	#listaredes{
+		list-style: none;
+		color: white;
+			
 
-<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+	}
+	.flecha{
+		float: right;
+		color: white;
+		font-size: 24px;
+	}
+
+</style>
 <script src="../public/js/jquery-3.2.0.min.js"></script>
 	<script>	
-		$(document).ready(function(){
-			document.getElementById("imagen").addEventListener("mouseover",grande,false);
-			document.getElementById("imagen").addEventListener("mouseout",igual,false);
-			var elementos= document.querySelectorAll("img");
-									
-				for(var i = 0;i<elementos.length;i++){
-				elementos[i].addEventListener("mouseover",up,false);
-				elementos[i].addEventListener("mouseout",down,false);
-			}
-
-		});
-		function grande(){
-		$("#imagen").attr("src","../public/img/s-galeria1.jpg");
-		}
-		function igual(){
-		$("#imagen").attr("src","../public/img/r-historica.jpg");
+	$(document).ready(function(){
+		/*$("#auto").click(function(){
+			$(this).animate(
+			{
+			marginLeft:"+=100px"
+			},2000);
+		});*/
+		$("#redes").click(function(){
+			$(this).fadeToggle(500);		
+	});
 	
-		}	
-		function up(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/g-banner.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/g-banner2.png");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/g-banner3.png");
-			}
-		}
-		function down(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/r-historica.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/s-galeria1.jpg");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/s-galeria2.jpg");
-			}
-		}
+		
 
 			
 	
 	</script>
 </head>
-<body id="cuerpo">
-<div class="contenedor">
-<div class="header">
-	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
-	<p>Leyendo y cambiando atributos HTML con JavaScript</p>
-
-	<p class="logo">reemplazar cosas</p>
-</div>
-<div class="contenido">
-	<div id="principal">
-	<img src="..//public/img/r-historica.jpg" id="imagen" width="150px" height="150px">
-		
-	<div id="imagenes">
-		<img src="../public/img/r-historica.jpg" id="img1"  alt="">
-		<img src="../public/img/s-galeria1.jpg"  id="img2" alt="">
-		<img src="../public/img/s-galeria2.jpg" id="img3"  alt="">
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<img src="../public/img/auto.jpg" id="auto" width="150px" height="100px">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur laborum, facilis, nobis cupiditate cumque excepturi aliquid ab, amet saepe tempora iure obcaecati ipsa incidunt maxime natus quam. Libero, earum, fuga.</div>
+			<div>Eos voluptate, aspernatur quia optio! Similique, voluptatem quod fuga necessitatibus eius, reiciendis iure mollitia soluta distinctio rem tempora. Veniam sapiente optio ducimus! Reiciendis id voluptatem, accusamus neque ipsam, est culpa.</div>
+			
+			<div id="redes">
+			<div ><span class="glyphicon glyphicon-circle-arrow-left flecha" ></span></div>
+				<ul id="listaredes">
+					<li>red social 1</li>
+					<li>red social 2</li>
+					<li>red social 3</li>
+					<li>red social 4</li>
+					<li>red social 5</li>
+				</ul>
+			</div>
+			<div>Commodi, laborum, earum ullam voluptas, enim laudantium esse ea voluptatibus iusto saepe omnis magni dolorem accusantium odit. Tempora repudiandae nemo alias veniam, eius mollitia nostrum, soluta nobis reprehenderit! Et, minima.</div>
+			<div>Nihil beatae, cum nemo iste. Illum minus eos obcaecati autem recusandae est placeat, ea aliquid maiores quod veniam! Iste distinctio doloribus consequuntur porro sapiente libero atque molestiae, harum vitae pariatur.</div>
+			<div>Commodi eum dolorem beatae blanditiis quas consequuntur amet non. Pariatur quaerat labore iure similique, aspernatur architecto, dolor odit asperiores alias consectetur possimus ipsam hic odio molestias officia laboriosam. Ratione, fugiat?</div>
+			<div>Blanditiis eligendi pariatur, dicta est, obcaecati voluptate cum repellendus! Dolores reprehenderit, esse fugiat aut possimus ducimus earum quam voluptates laudantium assumenda quod, laborum tempore doloribus quos nam! Ducimus, saepe, repellendus!</div>
+			<div>Tempora maxime fugit, quo iste ipsum sed amet quidem esse provident nostrum eaque, quibusdam. Eaque repellendus quod voluptatibus suscipit eos, velit quas deserunt omnis odio neque? Voluptates suscipit, maxime tenetur.</div>
+			<div>Facilis facere est velit autem numquam atque laborum magnam minima sequi voluptatum illum, dolores reiciendis quisquam voluptas adipisci sint, aliquam repellat molestiae debitis consectetur. Quae nam laborum doloremque amet, odit.</div>
+			<div>Commodi quos suscipit earum alias adipisci ullam porro explicabo, at id tenetur ab modi consequatur esse aperiam ducimus laboriosam nobis voluptatum consectetur optio, nostrum molestias aliquid, sapiente dolore fugiat. Dolorem.</div>
+			<div>Est expedita officiis ab deserunt eos vitae, nisi, laudantium quisquam, magnam recusandae voluptatibus a libero! Facilis, corporis. Nobis mollitia culpa maxime et ducimus. Incidunt consequatur deleniti omnis repellendus similique iusto.</div>
+			<div>Blanditiis sed, magni, cupiditate debitis saepe numquam perspiciatis sapiente facilis minus, veritatis excepturi iusto labore perferendis molestiae ab optio porro iste expedita id vero consectetur non quas! Quis, non, ab?</div>
+			<div>Odit, consectetur repellat repudiandae pariatur numquam. Atque incidunt, nesciunt tempore ratione eligendi vitae officiis! Quo error, nemo? Dolores, facilis, iure! Excepturi cum, facilis modi ad at distinctio illum est! Explicabo.</div>
+			<div>Cum consequatur voluptatibus, ipsam a, minus, quaerat dolorem dolor adipisci, labore inventore voluptas non esse. Soluta minima temporibus ea neque expedita dolore perferendis eligendi quas, non officia, dicta deserunt eaque.</div>
+			<div>Rerum, quasi sed adipisci quaerat dolore ratione repudiandae exercitationem ipsa perspiciatis odit obcaecati modi corporis debitis nulla aliquid error cum, ea, voluptatibus quis sapiente? Vel maxime, odit numquam dolore odio.</div>
+			<div>Tempora sapiente quis, corporis ea quibusdam, quasi dolore voluptatibus explicabo voluptate inventore dolor dicta deserunt non cum dignissimos harum! Cumque excepturi repellat, ad exercitationem possimus, sequi nemo voluptates amet provident.</div>
+		</div>
 	</div>
-	</div>	
-</div>
 </div>
 
 </body>

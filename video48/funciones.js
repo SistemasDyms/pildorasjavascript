@@ -1,2 +1,0 @@
-alert("prueba");
-window.onload;
