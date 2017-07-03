@@ -2,72 +2,67 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Curso de JavaScipt Video 39-</title>
+<title>Curso de JavaScipt Video 47</title>
 
-<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+<style type="text/css">
+	.listamenu{		
+		width: 525px;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+	.listamenu ul{
+		display: block;
+		list-style: none;
+	}
+	.listamenu li{
+		width: 121px;
+		float: left;
+		padding: 10px 5px;
+		text-align: center;
+	}
+	#formlogin{
+		display: none;
+	}
+</style>
 <script src="../public/js/jquery-3.2.0.min.js"></script>
 	<script>	
 		$(document).ready(function(){
-			document.getElementById("imagen").addEventListener("mouseover",grande,false);
-			document.getElementById("imagen").addEventListener("mouseout",igual,false);
-			var elementos= document.querySelectorAll("img");
-									
-				for(var i = 0;i<elementos.length;i++){
-				elementos[i].addEventListener("mouseover",up,false);
-				elementos[i].addEventListener("mouseout",down,false);
-			}
-
+		$("#login").click(function (){
+			$("#formlogin").fadeToggle(500);
 		});
-		function grande(){
-		$("#imagen").attr("src","../public/img/s-galeria1.jpg");
-		}
-		function igual(){
-		$("#imagen").attr("src","../public/img/r-historica.jpg");
-	
-		}	
-		function up(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/g-banner.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/g-banner2.png");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/g-banner3.png");
-			}
-		}
-		function down(e){
-			if(e.target==img1){
-			$("#img1").attr("src","../public/img/r-historica.jpg");
-			}else if(e.target==img2){
-			$("#img2").attr("src","../public/img/s-galeria1.jpg");
-			}else if(e.target==img3){
-			$("#img3").attr("src","../public/img/s-galeria2.jpg");
-			}
-		}
-
+		});
 			
-	
 	</script>
 </head>
-<body id="cuerpo">
-<div class="contenedor">
-<div class="header">
-	<p class="logo">Curso JavaScript Píldoras Informáticas Video 32</p>
-	<p>Leyendo y cambiando atributos HTML con JavaScript</p>
-
-	<p class="logo">reemplazar cosas</p>
-</div>
-<div class="contenido">
-	<div id="principal">
-	<img src="..//public/img/r-historica.jpg" id="imagen" width="150px" height="150px">
-		
-	<div id="imagenes">
-		<img src="../public/img/r-historica.jpg" id="img1"  alt="">
-		<img src="../public/img/s-galeria1.jpg"  id="img2" alt="">
-		<img src="../public/img/s-galeria2.jpg" id="img3"  alt="">
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<div class="listamenu">
+			<ul >
+				<li>Home</li>
+				<li>Quienes Somos</li>
+				<li>Contacto</li>
+				<li id="login">inicia Sesion</li>
+				<div id="formlogin">
+					<form action="#!" >
+						<div class="form-group">
+							<label for="user">Usuario</label>
+							<input type="text" class="form-control" name="user" id="user">
+						</div>
+						<div class="form-group">
+							<label for="contra">Contraseña</label>
+							<input type="text" class="form-control" name="contra" id="contra">
+						</div>
+						<input type="submit" name="envia" value="Inicia Sesion" class="btn btn-success">
+					</form>
+				</div>	
+			</ul>
+		</div>
+			
+		</div>
 	</div>
-	</div>	
 </div>
-</div>
-
 </body>
 </html>
