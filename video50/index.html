@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jqueryeasing.js"></script>
 <style type="text/css">
 	.menu-redes{
 		position: absolute;
@@ -27,15 +28,22 @@
 
 	}
 </style>
-	<script>	
-		$(document).ready(function(){
-			
-		});
-		
-
-			
+<script type="text/javascript" src=""></script>
+<script>	
+$(document).ready(function(){
+	$(".menu-redes").hover(function(){
+		$(this).stop().animate(
+		{
+			marginLeft:"-40px"
+		},800,"easeInSine");
+	}, function(){
+		$(this).stop().animate({
+			marginLeft:"-200px"
+		},2000,"easeOutBounce")
+	} );
+});
 	
-	</script>
+</script>
 </head>
 <body >
 <div class="container">
