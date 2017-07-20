@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 52</title>
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="../public/js/jquery.fancybox-thumbs.js"></script>
+<style type="text/css" src="../public/css/bootstrap.min.css"></style>
+<style type="text/css" src="../public/css/jquery.fancybox.css"></style>
+<style type="text/css" src="../public/css/jquery.fancybox-thumbs.css"></style>
+<style type="text/css">
+	.galeria {
+		background-color: blue;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.galeria img{
+		
+	}
+</style>
+<script>
+$(document).ready(function(){
+	$('.galeria a').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+});
+			
+
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">pagina de prueba con preloader ROLLOVER</h1>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div class="galeria">
+	<hr>
+	<a href="../public/img/up.png" rel="gallery" title="imagen1">
+		<img src="../public/img/up.png" width="70" height="70" id="foto1" alt="imagen1">
+	</a>
+	<a href="../public/img/up.png" rel="gallery" title="imagen2">
+		<img src="../public/img/up.png" width="70" height="70" id="foto2" alt="imagen2">
+	</a>
+	<a href="../public/img/up.png" rel="gallery" title="imagen3">
+		<img src="../public/img/up.png" width="70" height="70" id="foto3" alt="imagen3">
+	</a>
+	<a href="../public/img/up.png" rel="gallery" title="imagen4">
+		<img src="../public/img/up.png" width="70" height="70" id="foto4" alt="imagen4">
+	</a>	
+
+	<hr>
+	</div>
+		
+	</div>
+</div>
+</div>
+</body>
+</html>
