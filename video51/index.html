@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 51</title>
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<style type="text/css" src="../public/css/bootstrap.min.css"></style>
+<style type="text/css">
+	.galeria {
+		background-color: blue;
+		margin: 0 auto;
+	}
+</style>
+<script>
+			
+$(document).ready(function() {
+var fotos=["../public/img/img1.jpg",
+			"../public/img/img1.jpg",
+			"../public/img/img1.jpg",
+			"../public/img/img1.jpg"];
+
+var imagenes=[];
+
+for(var i = 0; i<fotos.length;i++){
+	imagenes[i]= new Image();
+	imagenes[i].src=fotos[i];
+}
+	
+
+$("img").each(function(){
+	$(this).hover(cambiar,restaurar);
+
+	});
+function cambiar(e){
+	if(e.target==foto1){
+		$("#foto1").attr("src",imagenes[0].src);
+	}else if(e.target==foto2){
+		$("#foto2").attr("src",imagenes[1].src);
+	}else if(e.target==foto3){
+		$("#foto3").attr("src",imagenes[2].src);
+	}else if(e.target==foto4){
+		$("#foto4").attr("src",imagenes[3].src);
+	}	
+}
+function restaurar(e){
+	if(e.target==foto1){
+		$("#foto1").attr("src","../public/img/img1BN.jpg");
+	}else if(e.target==foto2){
+		$("#foto2").attr("src","../public/img/img1BN.jpg");
+	}else if(e.target==foto3){
+		$("#foto3").attr("src","../public/img/img1BN.jpg");
+	}else if(e.target==foto4){
+		$("#foto4").attr("src","../public/img/img1BN.jpg");
+	}
+}
+});
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">pagina de prueba con preloader ROLLOVER</h1>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<div class="galeria">
+		<img src="../public/img/img1BN.jpg" width="250" height="200" id="foto1">
+		<img src="../public/img/img1BN.jpg" width="250" height="200" id="foto2">
+		<img src="../public/img/img1BN.jpg" width="250" height="200" id="foto3">
+		<img src="../public/img/img1BN.jpg" width="250" height="200" id="foto4">
+	</div>
+		
+	</div>
+</div>
+</div>
+</body>
+</html>
