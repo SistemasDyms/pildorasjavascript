@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 54</title>
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+#prueba{
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	background-color: #FFFFFF;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+$("#boton").click(function(e){
+	e.preventDefault();
+	$("#contenido").attr("src","www.google.com");
+
+});
+
+ /*
+ ahora usaremoss Iframes
+	var ventana=open("../video1/primero.html","pagina de prueba","width=300,heigth=200,left=300");
+
+	$("#cerrar").click(function(e){
+		e.preventDefault();
+		ventana.close();
+	})*/
+});
+			
+
+</script>
+</head>
+<body>
+<div class="container">
+	
+	<h1 class="text-center">pagina de prueba Iframes parte2 </h1>
+
+	<a href="" id="boton">PULSAR</a>
+		<div id="prueba">
+			<iframe src="" id="contenido" frameborder="0" width="400px" height="400px"></iframe>
+		</div>
+
+</div>
+</body>
+</html>
