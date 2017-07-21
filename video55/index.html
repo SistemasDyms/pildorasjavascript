@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 55</title>
+<link rel="stylesheet" type="text/css" href="../public/css/jquery.fancybox.css">
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.fancybox.js"></script>
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+#prueba{
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	background-color: #FFFFFF;
+}
+a{
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 35px;
+}
+
+ul{
+	list-style: none;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+
+$(".single-img").fancybox({
+      openEffect : 'elastic',   //'fade', 'elastic'
+      closeEffect	: 'elastic',
+      openSpeed:'normal', //ms, slow, normal, fast (default 250ms)
+      closeSpeed:'normal',
+      helpers : {
+        title : {
+           type : 'inside' //'float', 'inside', 'outside' or 'over'
+        },
+        overlay : {
+          closeClick : true  // if true, se cierra al hacer click fuera de la imagen
+        }
+    },
+    padding:11
+});
+
+});
+			
+
+</script>
+</head>
+<body>
+<div class="container">
+	
+	<h1 class="text-center">pagina de prueba Iframes parte3 con fancyBox </h1>
+<a href="../public/img/img1.jpg" class="single-img">foto</a>
+		<ul>
+			<li><a href="www.google.com" id="fancybox-manual-a" data-fancybox-type="iframe" title="pagina" class="single-img">link</a></li>
+			<li><a href="../video10/index.html" data-fancybox-type="iframe" title="pagina" class="single-img">link</a></li>
+			<li><a href="../video10/index.html" title="pagina" data-fancybox-type="iframe" class="fancybox fancybox.iframe">link</a></li>
+			<li><a href="../video10/index.html" title="pagina" data-fancybox-type="iframe" class="fancybox fancybox.iframe">link</a></li>
+		</ul>		
+</div>
+</body>
+</html>
