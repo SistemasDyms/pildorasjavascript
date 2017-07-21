@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 52</title>
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+<style type="text/css">
+	.galeria {
+		background-color: blue;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.galeria img{
+		
+	}
+</style>
+<script>
+open("../video1/primero.html","pagina de prueba","width=300,heigth=200");
+$(document).ready(function(){
+	$("#formulario").hide();
+	$("#form").click(function(e){
+		$("#formulario").fadeIn(1000);
+
+		e.preventDefault();
+		//se puede usar return false o preventDefault() para desactivar el comportamiento del LINK
+		
+	});
+});
+			
+
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">pagina de prueba Iframes parte1  </h1>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+	<a href="" id="form">Mi formulario</a>
+	<form action="" id="formulario">
+		<div class="form-group">
+			<label for="user">usuario</label>
+			<input type="text" name="user" id="user" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="pass">Password</label>
+			<input type="text" name="pass" id="pass" class="form-control">
+		</div>
+		<input type="submit" name="enviar" value="enviar" class="btn btn-success">
+	</form>
+		
+	</div>
+</div>
+</div>
+</body>
+</html>
