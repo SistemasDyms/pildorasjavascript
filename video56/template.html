@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title></title>
+          <!-- Meta tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />  <!-- w3c recomends this meta tag  -->
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />  <!-- w3c recomends this meta tag  -->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="copyright" content="" />
+	<meta name="author" content="" />
+	<meta name="rating" content="general" />
+	<meta name="robots" content="all" />
+        <!-- Stylesheets -->
+	<link rel="stylesheet" href="../public/css/pluginNavigate.css" type="text/css" media="screen, projection" />
+	    <!-- Javascripts -->
+    <script language="javascript" type="text/javascript" src="../public/js/jquery-3.2.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../public/js/nav2.2.js"></script>
+    <script language="javascript" type="text/javascript">
+    		$(document).ready(function(){
+				
+
+				$("#JqueryMenu").navPlugin({
+					'itemWidth': 'auto',
+					'itemHeight': 30,
+					'navEffect': 'fade',
+					'speed': 500
+				});
+
+			});
+    </script>
+</head>
+<body>
+      <div id="wrap">
+      <div class="content">
+      	   <div id="dropdown">
+                <ul id="JqueryMenu">
+                    <li><a href="#">Archivo</a>
+                        <ul>
+                            <li><a href="#">Item 1 A</a></li>
+                            <li><a href="#">Item 1 B</a></li>
+                            <li><a href="#">Item 1 C</a></li>    
+                        </ul>
+                    </li>  <!-- Fin del Primer Menu --> 
+                    <li><a href="#">Quienes Somos</a></li><!-- fin Item dos  -->
+                    <li><a href="#">Productos</a>
+						<ul>
+                            <li><a href="#">Producto 1</a></li>
+                            <li><a href="#">Producto 2</a></li>
+                            <li><a href="#">Producto 3</a>
+                                <ul>
+                                    <li><a href="#">C 1</a>
+                                        <ul>
+                                            <li><a href="#">C1 a</a></li>
+											<li><a href="#">C1 b</a></li>
+											<li><a href="#">C1 c</a></li>
+                                        </ul></li>
+                                </ul></li> 
+                        </ul></li><!-- fin Item tres  -->
+                    <li><a href="#">Item 4</a></li><!-- fin Item 4  -->
+                    <li><a href="#">Item 5</a></li><!-- fin Item 5  -->
+                    <li><a href="#">Item 6</a></li><!-- fin Item 6  -->
+                </ul>
+           </div>  <!-- end of navmenu -->         
+             <!-- end of navmenu -->
+      </div>  <!-- end of content -->
+      </div>  <!-- end of wrap div -->
+      
+</body>
+</html>
