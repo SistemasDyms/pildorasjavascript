@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 64 Formularios parte 8</title>
+
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery-validate.js"></script>
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+.formulario{
+	width: 400px;
+	padding: 40px 40px; 
+	height: auto;
+	background-color: #967FC5;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 0px 10px #eee;
+}
+.formulario input{
+	right: 20px;
+}
+.informacion{
+	width: 450px;
+	height: auto;
+	background-color: #fff;
+	color:blue;
+	font-size: 24px;
+}
+#nompago,#numero,#correopago{
+	background-color: #967FC5;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+	$("#form").validate({
+		rules:{
+		nom:"required",
+		ape:"required",
+		f_nacimiento:{
+			date:true,
+			required:true
+		},
+		edad:{
+		number:true,
+		required:true
+		}
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center">validacion de formularios parte 2</h2>
+<div class="formulario">
+	<form action="#!" id="form" method="GET">
+	Nombre:<input type="text" id="nom" name="nom" ><br>
+	Apellido:<input type="text" id="ape" name="ape"><br>
+	Email:<input type="email" id="email" name="email"><br><hr>
+	Edad:<input type="edad" id="edad" name="edad" ><br><hr>
+	Fecha:<input type="text" id="f_nacimiento" name="f_nacimiento" ><br><hr>
+	A:<input type="radio" name="opcion" id="opciona" value="a"><br>
+	B:<input type="radio" name="opcion" id="opcionb" value="b"><br><hr>
+	pagar via:<br>
+	Paypal:<input type="radio" value="paypal" id="paypal" name="a"><br>
+	Visa:<input type="radio" value="visa" id="visa" name="a"><br>
+	MasterCard:<input type="radio" value="mastercard" id="mastercard" name="a"><br><hr>
+	ingresa los datos de pago:<br>
+	Nombre:<input type="text" id="nompago" name="nompago" disabled=""><br>
+	numero :<input type="text" id="numero" name="numero" disabled=""><br>
+	Email:<input type="text" id="correopago" name="correopago" disabled=""><br><hr>
+	Pais: <select name="pais" id="pais">
+		<option id="opcion1" value="opcon1">opcion 1</option>
+		<option id="opcion2" value="opcion2">opcion 2</option>
+		<option id="opcion3" value="opcion3">opcion 3</option>
+		<option id="opcion4" value="opcion4">opcion 4</option>
+		<option id="opcion5" value="opcion5">opcion 5</option>
+		<option id="opcion6" value="opcion6">opcion 6</option>
+	</select><br><hr>
+	real madrid:<input type="checkbox" name="real" value="real"><br>
+	tachira:<input type="checkbox" name="tachira" value="tachira"><br>
+	Boca Juniors:<input type="checkbox" name="boca" value="boca"><br>
+	Barcelona:<input type="checkbox" name="barca" value="barca"><br>
+	<hr>
+	<input type="submit" name="boton" id="comprobar" value="Enviar">
+</form>	
+</div>
+<div class="informacion">
+	
+</div>
+
+</div>
+</body>
+</html>
