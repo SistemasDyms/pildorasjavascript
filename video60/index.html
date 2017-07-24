@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 60 Formularios parte 4</title>
+
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+.formulario{
+	width: 300px;
+	padding: 40px 40px; 
+	height: 350px;
+	background-color: #967FC5;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 0px 10px #eee;
+}
+.formulario input{
+	right: 20px;
+}
+.informacion{
+	width: 300px;
+	height: auto;
+	background-color: #fff;
+	color:blue;
+	font-size: 24px;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+//asi se borra algun valor que tenga el campo input 
+$("#nom").focus(function(){
+var nombre= $(this);
+	if(nombre.val()==nombre.attr("value")){
+		nombre.val("");
+	}
+});
+
+//se consulta el campo para ver si lleva algun dato de no ser asi muestra un alert
+$("#form").submit(function(){
+	if($("#nom").val()=="" || $("#nom").val()=="ingresa el nombre" ){
+	alert("Ingresa algo en el campo nombre");
+	$("#nom").focus();
+	return false;
+	}else{
+	alert("el nombre ingresado es "+$("#nom").val());
+	}
+});
+//asi evaluamos que la edad sea un numero
+$("#edad").blur(function(){
+	var edad = $(this).val();
+	if(isNaN(edad)){
+	alert("Ingresa un valor Numerico en el campo edad");
+	edad.focus();
+	return false;
+	}
+});
+
+// asi  guardamos todos los checked 
+var miarray= new Array();
+var i =0;
+$(":checkbox").click(function(){
+	miarray[i]=$(this).val();
+	//alert("Posicion "+i+" de " +miarray[i]);
+	$(".informacion").append("<p>"+miarray[i]+"</p>");
+	i++;
+});
+//tomar el valor del campo tipo select
+$("#pais").change(function(){
+	alert("el pais seleccionado es "+$(this).val());
+});	
+
+
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center">Manipulacion de formularios parte 4</h2>
+<div class="formulario">
+	<form action="#!" id="form" method="GET">
+	Nombre:<input type="text" id="nom" name="nom" value="ingresa el nombre"><br>
+	Apellido:<input type="text" id="ape" name="ape"><br>
+	Email:<input type="email" id="email" name="email"><br><hr>
+	Edad:<input type="text" id="edad" name="edad"><br><hr>
+	A:<input type="radio" name="opcion" id="opciona" value="a"><br>
+	B:<input type="radio" name="opcion" id="opcionb" value="b"><br><hr>
+	Pais: <select name="pais" id="pais">
+		<option id="opcion1" value="opcon1">opcion 1</option>
+		<option id="opcion2" value="opcion2">opcion 2</option>
+		<option id="opcion3" value="opcion3">opcion 3</option>
+		<option id="opcion4" value="opcion4">opcion 4</option>
+		<option id="opcion5" value="opcion5">opcion 5</option>
+		<option id="opcion6" value="opcion6">opcion 6</option>
+	</select><br><hr>
+	real madrid:<input type="checkbox" name="real" value="real"><br>
+	tachira:<input type="checkbox" name="tachira" value="tachira"><br>
+	Boca Juniors:<input type="checkbox" name="boca" value="boca"><br>
+	Barcelona:<input type="checkbox" name="barca" value="barca"><br>
+	<hr>
+	<input type="submit" name="boton" id="comprobar" value="Enviar">
+</form>	
+</div>
+<div class="informacion">
+	
+</div>
+
+</div>
+</body>
+</html>
