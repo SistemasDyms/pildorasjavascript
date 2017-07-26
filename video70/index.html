@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 70 Ajax parte 3</title>
+
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery-validate.js"></script>
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+px solid red;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+$("#login").submit(function(){
+	var datosFormulario={
+	usuario:$("#user").val(),
+	pass:$("#pass").val()
+	}
+});
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center">Ajax parte 3</h2>
+<form action="procesa.php" method="POST" id="login">
+	User:<input type="text" name="user" id="user"><br>
+	pass:<input type="text" name="pass" id="pass"><br>
+	<input type="submit" name="enviar" value="Iniciar Sesion">
+</form>
+
+</div>
+</body>
+</html>
