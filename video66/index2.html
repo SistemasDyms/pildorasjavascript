@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario </title>
+
+<script src="../public/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery-validate.js"></script>
+	<style type="text/css">
+		body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+.formulario{
+	width: 400px;
+	padding: 40px 40px; 
+	height: auto;
+	background-color: #967FC5;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 0px 10px #eee;
+}
+label.error{
+	font-size: 17px;
+	background-color: red;
+	color:#fff;
+}
+input.error{
+	border:1px solid red;
+}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+$("#form").validate({
+	rules:{
+	nom:"required",
+	ape:"required",
+
+	fecha:{
+		date:true,
+		required:true,
+		
+	},
+	edad:{
+	range:[1,105],
+	number:true,
+	required:true
+	},
+	pais:{
+	required:true
+	},
+	email:{
+	required:true,
+	email:true
+	}
+
+
+},
+messages:{
+	nom:"Campo Nombre obligatorio",
+	ape:"Campo Apellido Obligatorio",
+	fecha:{
+		date:"Formato Incorrecto MM/DD/AAAA",
+		required:"Campo Fecha Obligatorio"
+	},
+	edad:{
+		number:"Debe Escribir Solo numeros",
+		range:"Edad entre 1 y 105",
+		required:"Campo Edad Obligatorio"
+	},
+	pais:{
+	required:"Pais Requerido"
+	},
+	email:{
+	required:"Campo Email Requerido",
+	email:"Ingresa un email valido"
+	}
+}
+/*Fin de las Reglas*/
+});
+});	
+	</script>
+
+</head>
+<body>
+<div class="formulario">
+	<form action="#!" id="form" method="get">
+		<label for="nom">Nombre:</label>
+		<input type="text" id="nom" class="" name="nom"><hr><br>
+	<label for="ape">Apellido:</label><input type="text" id="ape" class="" name="ape"><hr><br>
+	<label for="email">Email:</label><input type="text" id="email" class="" name="email"><hr><br>
+	<label for="edad">edad:</label><input type="text" id="edad" class="" name="edad"><hr><br>
+	<label for="fecha">Fecha de Nacimiento:</label><input type="text" id="fecha" class="" name="fecha"><hr><br>
+	<label for="contra">Contraseña:</label><input type="text" id="contra" class="" name="contra"><hr><br>
+	<label for="rcontra">Repita Contraseña:</label><input type="text" id="rcontra" class="" name="rcontra"><hr><br>
+	Aficiones:Futbol:<input type="checkbox">Dormir:<input type="checkbox"><hr><br>
+	Pais:<select name="pais"  id="pais">
+		<option value="pais1">pais 1</option>
+		<option value="pais2">pais 2</option>
+		<option value="pais3">pais 3</option>
+		<option value="pais4">pais 4</option>
+	</select><hr><br>
+	comentario: <textarea name="coment" id="coment" cols="30" rows="10"></textarea><br><hr>
+	Te gustaria Recibir correos:<br>
+	si:<input type="radio" name="correos" id="correos" value="si">No:<input type="radio" name="correos" id="correos" value="no"><hr><br>
+	<input type="submit" name="enviar" value="Registrar">
+
+
+	</form>
+</div>
+	
+</body>
+</html>
