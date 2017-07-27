@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript video 72 Ajax parte 5</title>
+
+<script src="jquery-3.2.0.min.js"></script>
+
+<style type="text/css">
+body{
+	background-color: #3292f2;
+	color:#FFFFFF;
+}
+.text-center{
+	text-align: center;
+}
+.contenido{
+	width: 150px;
+	height: auto;
+	border-bottom: 1px solid #FFF;
+}
+
+</style>
+<script>
+
+$(document).ready(function(){
+
+$("#login").submit(function(){
+var datosFormulario={
+	usuario:$("#user").val(),
+	contra:$("#pass").val()};
+	//var cadena = $(this).serialize();
+
+	$.get("login.php",datosFormulario,procesaDatos).error(procesaError);
+	return false;
+	
+});
+function procesaDatos(datosrespuesta){
+if(datosrespuesta=="autorizado"){
+	$(".contenido").html("<p>Bienvenido de nuevo</p>");
+}else{
+	$(".contenido").html("<p>Error al Ingresar</p>");
+}
+}
+function procesaError(){
+	var msgError ="Ocurrio un Error al Intentar cargar la pagina Intentelo de nuevo ams tarde";
+	$(".contenido").html("<p>" + msgError + "</p>");
+}
+});
+</script>
+</head>
+<body>
+<div class="container">
+<h2 class="text-center">Ajax parte 5</h2>
+<form action="login.php" method="GET" id="login">
+	User:<input type="text" name="user" id="user"><br>
+	pass:<input type="text" name="pass" id="pass"><br>
+	<input type="submit" name="enviar" value="Iniciar Sesion">
+</form>
+<br><br>
+<div class="contenido">
+	
+</div>
+</div>
+</body>
+</html>
